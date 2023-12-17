@@ -1,9 +1,6 @@
 import React from "react";
-
-interface StyleSheet {
-    fontFamily: string;
-    backgroundColor: string;
-}
+import { StyleSheet } from "@src/components/theme/StyleSheet";
+import { BaseComponent } from "./theme/BaseComponent";
 
 interface BoxProps {
     // TODO - RESOLVER O ANY DEPOIS
@@ -12,11 +9,11 @@ interface BoxProps {
     styleSheet: StyleSheet;
 }
 
-export default function Box({ styleSheet, children, tag }: BoxProps) {
+export default function Box({ styleSheet, children, tag, ...props }: BoxProps) {
     const Tag = tag || 'div';
     return (
-        <Tag style={styleSheet}>
+        <BaseComponent as={tag} styleSheet={styleSheet}>
             {children}
-        </Tag>
+        </BaseComponent>
     );
 }
