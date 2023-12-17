@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { StyleSheet } from "@src/components/theme/StyleSheet";
+import { StyleSheet } from "components/theme/StyleSheet";
 import { parseStyleSheet } from "@displaykit/responsive_styles";
 
 interface StyledBaseComponent {

@@ -1,4 +1,8 @@
 - [x] Ajustar os imports
 - [x] Adicionar o Styled Components
-- [] Adicionar suporte para trabalharmos com breakpoints
-- [] Separar o StyleSheet
+- [x] Adicionar suporte para trabalharmos com breakpoints
+- [x] Separar o StyleSheet
+- [] Desenho livre do nosso layout "Componentes de Baixa Fidelidade"
+- []
+- []
+- []
