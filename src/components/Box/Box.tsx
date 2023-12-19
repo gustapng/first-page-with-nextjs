@@ -3,8 +3,7 @@ import { StyleSheet } from "@src/theme/StyleSheet";
 import { BaseComponent } from "@src/theme/BaseComponent";
 
 interface BoxProps {
-    // TODO - RESOLVER O ANY DEPOIS
-    tag?: any;
+    tag?: 'main' | 'div' | 'article' | 'section' | 'ul' | string;
     children?: React.ReactNode;
     styleSheet?: StyleSheet;
 }

@@ -1,3 +1,5 @@
+export { default } from "@src/screens/HomeScreen/HomeScreen";
+
 // import Box from "@src/components/Box";
 // import theme from "@src/theme/theme";
 // import styled from "styled-components";
@@ -23,5 +25,3 @@
 //         </Box>
 //     )
 // }
-
-export { default } from "@src/screens/HomeScreen/HomeScreen";

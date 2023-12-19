@@ -2,7 +2,13 @@
 - [x] Adicionar o Styled Components
 - [x] Adicionar suporte para trabalharmos com breakpoints
 - [x] Separar o StyleSheet
-- [] Desenho livre do nosso layout "Componentes de Baixa Fidelidade"
-- []
-- []
-- []
+- [x] Desenho livre do nosso layout "Componentes de Baixa Fidelidade"
+- [x] Estilos globais do nosso projeto
+- [x] Revisitando componentes
+  - Box
+  - Text
+  - BaseComponent
+  - StyleSheet
+- [x] Footer
+- [x] Adicionando Fonte Externa
+- [x] Vinculando o componente Text com o Figma
