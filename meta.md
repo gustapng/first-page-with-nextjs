@@ -12,3 +12,7 @@
 - [x] Footer
 - [x] Adicionando Fonte Externa
 - [x] Vinculando o componente Text com o Figma
+
+- [x] Desacoplar o tema do projeto
+- [x] Melhorar o autocomplete do tema
+
