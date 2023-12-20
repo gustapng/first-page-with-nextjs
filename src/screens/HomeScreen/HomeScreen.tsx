@@ -7,12 +7,7 @@ import Footer from "@src/screens/HomeScreen/patterns/Footer/Footer";
 
 export default function HomeScreen() {
   return (
-    <Box tag="main"
-     styleSheet={{backgroundColor: 'grey',
-                  flex: 1,
-                  alignItems: 'center'
-                }}
-  >
+    <Box tag="main" styleSheet={{backgroundColor: 'grey', flex: 1, alignItems: 'center' }}>
     <Background />
     <Menu />
     <Feed>
