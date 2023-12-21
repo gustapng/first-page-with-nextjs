@@ -16,3 +16,4 @@
 - [x] Desacoplar o tema do projeto
 - [x] Melhorar o autocomplete do tema
 
+- [x] Criar um Image Component simples, um adaptador de configs de imagem

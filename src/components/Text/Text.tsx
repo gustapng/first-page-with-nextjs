@@ -8,32 +8,39 @@ import { useTheme } from "@src/theme/ThemeProvider";
 
 interface TextProps {
   variant?: ThemeTypographyVariants;
-  tag?: 'p' | 'li' | 'h1' | 'h2';
+  tag?: 'a' | 'p' | 'li' | 'h1' | 'h2' | string;
   children?: React.ReactNode;
   styleSheet?: StyleSheet;
+  ref: any;
 }
-export default function Text({
+const Text = React.forwardRef(({
+                             tag,
                              styleSheet,
                              variant,
                              ...props
-                              }: TextProps) {
+                              }: TextProps, ref) => {
 
   const theme = useTheme();
   const textVariant = theme.typography.variants[variant];
-
+  // TODO - ERRO AQUI, COMO SE NÃO CHEGASSEM TODAS AS PROPRIEDADES PARA MONTAR A TAG A
+  console.log(props);
     return (
       <BaseComponent
+        as={tag}
         styleSheet={{
           fontFamily: theme.typography.fontFamily,
           ...textVariant,
           ...styleSheet,
         }}
+        ref={ref}
         {...props}
       />
     )
-}
+})
 
 Text.defaultProps = {
   tag: 'p',
   variant: 'body2',
 }
+
+export default Text;
