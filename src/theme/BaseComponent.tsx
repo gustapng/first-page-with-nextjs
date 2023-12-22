@@ -17,7 +17,6 @@ const StyledBaseComponent = styled.div<StyledBaseComponent>`
 `;
 
 interface BaseComponentProps {
-  as: string;
   styleSheet: StyleSheet;
   [key: string]: any;
 }

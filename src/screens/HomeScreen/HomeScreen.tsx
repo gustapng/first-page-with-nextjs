@@ -13,12 +13,12 @@ export default function HomeScreen() {
     <Box
       tag="main"
       styleSheet={{
-        backgroundColor: theme.colors.neutral.x400,
+        backgroundColor: theme.colors.positive.x100,
         flex: 1,
         alignItems: 'center'
       }}
     >
-    <Link colorVariant="accent" href="/sobre">
+    <Link colorVariant="negative" href="/sobre">
       Vá para uma página sobre
     </Link>
     <Link href="https://google.com">
@@ -28,12 +28,12 @@ export default function HomeScreen() {
     <Menu />
     <Feed>
       <Feed.Header />
-        <Text tag="h1" variant="display1">
+        <Text tag="h2" variant="heading1">
           Últimas Atualizações
         </Text>
         <Feed.Posts />
      </Feed>
      <Footer />
   </Box>
-  );
+  )
 }

@@ -11,7 +11,7 @@ interface BoxProps {
 export default function Box({ styleSheet, children, tag, ...props }: BoxProps) {
     const Tag = tag || 'div';
     return (
-        <BaseComponent as={tag} styleSheet={styleSheet} {...props}>
+        <BaseComponent as={Tag} styleSheet={styleSheet} {...props}>
             {children}
         </BaseComponent>
     );

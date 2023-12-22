@@ -1,10 +1,10 @@
 import { Breakpoints } from '@displaykit/responsive_styles';
 
 // Generics
-type ResposiveProperty<Type> = Partial<Record<Breakpoints, Type>>;
+type ResponsiveProperty<Type> = Partial<Record<Breakpoints, Type>>;
 
 export interface StyleSheet {
-    fontFamily?: ResposiveProperty<string> | string;
-    backgroundColor?: ResposiveProperty<string> | string;
-    [key: string]: any;
+  fontFamily?: ResponsiveProperty<string> | string;
+  backgroundColor?: ResponsiveProperty<string> | string;
+  [key: string]: any;
 }
