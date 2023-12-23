@@ -2,30 +2,66 @@ import { ThemeTypographyVariants } from "@src/theme/theme";
 import styled from "styled-components";
 import Text from "@src/components/Text/Text";
 import React from "react";
-// TODO RESOLVER ESSA LIB
-import { useRipple } from 'react-ripples';
+import Ripples, {createRipples} from 'react-ripples';
 import { useRef } from 'react'
+import {StyleSheet} from "@src/theme/StyleSheet";
+import {useRouter} from "next/router";
+
+// [Composição atual]
+// Button: tag
+// Text: tag
+// BaseComponent: tag
+// StyledComponent
 
 const StyledButton = styled(Text)<any>`
-    
+    border: none;
 `;
 
-interface ButtonBase {
+export interface ButtonBaseProps {
+  href?: string;
   children: React.ReactNode;
   textVariant?: ThemeTypographyVariants;
+  styleSheet?: StyleSheet;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 export default function ButtonBase({
   children,
   textVariant,
+  styleSheet,
+  href,
   ...props
- }: ButtonBase) {
+ }: ButtonBaseProps ) {
+  const router = useRouter();
   const ref = React.useRef();
-  useRipple(ref);
-  const Tag = 'button';
+  const isLink = Boolean(href);
+  const Tag = isLink ? 'a' : 'button';
 
   return (
-    <StyledButton as={Tag} {...props}>
-      {children}
-    </StyledButton>
+    <Ripples color="#fff" placeholder={undefined}>
+      <StyledButton
+        ref={ref}
+        tag={Tag}
+        href={href}
+        styleSheet={{
+          backgroundColor: 'transparent',
+          color: 'inherit',
+          outline: '0',
+          cursor: 'pointer',
+          textDecoration: 'none',
+          border: 0,
+          ...styleSheet
+        }}
+        onClick={(event) => {
+          isLink && event.preventDefault();
+          isLink && router.push(href);
+          !isLink && props.onClick && props.onClick(event);
+        }}
+        {...props}
+      >
+        {children}
+      </StyledButton>
+    </Ripples>
+
+
   );
 }

@@ -20,6 +20,7 @@ const Text = React.forwardRef(({
                              ...props
                               }: TextProps, ref) => {
 
+  console.log("tag", tag);
   const theme = useTheme();
   const textVariant = theme.typography.variants[variant];
 
